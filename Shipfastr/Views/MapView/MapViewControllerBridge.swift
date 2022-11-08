@@ -1,8 +1,18 @@
 //
-//  MapViewControllerBridge.swift
-//  Shipfastr
+//  MapViewControllerBrigde.swift
+//  Shipfstr
 //
-//  Created by Mohammad Esmaeilirad  on 2022-11-08.
+//  Created by Mohammad Esmaeilirad  on 2022-11-06.
 //
 
-import Foundation
+import SwiftUI
+
+struct MapViewControllerBridge: UIViewControllerRepresentable {
+
+  func makeUIViewController(context: Context) -> MapViewController {
+    return MapViewController()
+  }
+
+  func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+  }
+}
