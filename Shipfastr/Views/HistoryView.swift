@@ -2,14 +2,17 @@
 //  HistoryView.swift
 //  Shipfastr
 //
-//  Created by Mohammad Esmaeilirad  on 2022-11-08.
+//  Created by Mohammad Esmaeilirad  on 2022-11-04.
 //
 
 import SwiftUI
 
 struct HistoryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Color.blue
+            .ignoresSafeArea()
+        Text("This is history view")
+            
     }
 }
 
