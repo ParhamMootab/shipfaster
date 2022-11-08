@@ -1,0 +1,6 @@
+framework module Pods_Shipfastr {
+  umbrella header "Pods-Shipfastr-umbrella.h"
+
+  export *
+  module * { export * }
+}

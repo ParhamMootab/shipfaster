@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		407A21820E0B086194B98295 /* Pods_Shipfastr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */; };
 		F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */; };
 		F88D4C22291AFA6500896275 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C21291AFA6500896275 /* ContentView.swift */; };
 		F88D4C24291AFA6600896275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88D4C23291AFA6600896275 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1237BC343E6129BA62E5FF /* Pods-Shipfastr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.debug.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.debug.xcconfig"; sourceTree = "<group>"; };
+		B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.release.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.release.xcconfig"; sourceTree = "<group>"; };
+		D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shipfastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D4C1C291AFA6500896275 /* Shipfastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shipfastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipfastrApp.swift; sourceTree = "<group>"; };
 		F88D4C21291AFA6500896275 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407A21820E0B086194B98295 /* Pods_Shipfastr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		159ACDDBE9CEEEBC2BE080B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2726D4627B5FA960741C169F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C1237BC343E6129BA62E5FF /* Pods-Shipfastr.debug.xcconfig */,
+				B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F88D4C13291AFA6500896275 = {
 			isa = PBXGroup;
 			children = (
 				F88D4C1E291AFA6500896275 /* Shipfastr */,
 				F88D4C1D291AFA6500896275 /* Products */,
+				2726D4627B5FA960741C169F /* Pods */,
+				159ACDDBE9CEEEBC2BE080B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F88D4C2A291AFA6600896275 /* Build configuration list for PBXNativeTarget "Shipfastr" */;
 			buildPhases = (
+				8FB77E977B882F12EDACEB72 /* [CP] Check Pods Manifest.lock */,
 				F88D4C18291AFA6500896275 /* Sources */,
 				F88D4C19291AFA6500896275 /* Frameworks */,
 				F88D4C1A291AFA6500896275 /* Resources */,
+				CEA4D7F173995A2AA362F971 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FB77E977B882F12EDACEB72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shipfastr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA4D7F173995A2AA362F971 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shipfastr/Pods-Shipfastr-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shipfastr/Pods-Shipfastr-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shipfastr/Pods-Shipfastr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F88D4C18291AFA6500896275 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		F88D4C2B291AFA6600896275 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1237BC343E6129BA62E5FF /* Pods-Shipfastr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +359,7 @@
 		};
 		F88D4C2C291AFA6600896275 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
