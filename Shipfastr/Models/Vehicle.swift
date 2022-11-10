@@ -21,7 +21,7 @@ class Vehicle  {
     private lazy var newPath = GMSMutablePath()
     private lazy var carMarker = GMSMarker()
     
-    init (uiViewController: MapViewController, route: String?) {
+    init (_ uiViewController: MapViewController, route: String?) {
         mapView = uiViewController.mapView
         self.route = route
     }
