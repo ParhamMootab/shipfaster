@@ -21,9 +21,9 @@ class Vehicle  {
     private lazy var newPath = GMSMutablePath()
     private lazy var carMarker = GMSMarker()
     
-    init (uiViewController: MapViewController, route: String?) {
+    init (uiViewController: MapViewController, summarypolyline: String?) {
         mapView = uiViewController.mapView
-        self.route = route
+        self.route = summarypolyline
     }
     
     func addMarkers(locations: [CLLocationCoordinate2D]){
