@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var selectedTab = 0
     @State var showHomeSheet: Bool = true
     @State var showActivitySheet: Bool = false
+    @State var selectedShipment: Shipment?
     
     var body: some View {
         VStack {
@@ -19,12 +20,12 @@ struct ContentView: View {
                 case 2:
                     HistoryView()
                 default:
-//                    MapViewControllerBridge()
-//                        .ignoresSafeArea(edges: .top)
-                    HistoryView()
+                    MapViewControllerBridge(selectedShipment: $selectedShipment)
+                        .ignoresSafeArea(edges: .top)
+//                    HistoryView()
                 }
                 HomeView(isShowing: $showHomeSheet)
-                ActivityView(isShowing: $showActivitySheet)
+                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet)
             }
             Spacer()
 //            Divider()

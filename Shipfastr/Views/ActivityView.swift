@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActivityView: View {
     
-    static let vehicle1 = Vehicle(route: "}ieuEdtldP_KOaFEuB@gADmBR}Bb@kAXmA`@iBh@y@\\mDzAcHbCwBt@gDz@qCh@wEn@yC^gIbAgC`@CnDOfQG~FElDk@AgAA_@R[Rw@jAi@v@SPe@Ti@DMRKAk@Ci@EuAMsASgDq@aDaAeEiB{CuA}HoDqAg@cBg@uASsAImDIkHOoBI}@IsAUqA_@eCaA{CqAmDsA}@WkB]kBKqC@{JTSSq@Eq@GoCWm@GeA?mDd@oCVsCRgBB{EIWAmAOuAe@e@]g@y@VaGbA}S^{HDw@{CUkBMoCSLgCXwG?OEERuE~@oSb@kKyC]uBQsQuAyBOYDFmCTuGR}GNuCVqGl@yRv@_RvBwh@|@{QVgDzA_Gp@wBJSDOzAaGbDmMRc@p@iCtEoR`DgLpD_NlCoKz@kD~AsGt@qCfDaMdEkOfCgKlEoSvDuPp@iD~CoQpC{O~@iHlEk]|Ko|@bCcSd@uDtEDdGFvKJlCB~@?JG~DBdFDhAB|AEfHDfMR|SRvCBFmJBkDPcTvBKv@Kl@A|BFhFX`EHaEIiFY}BGm@@w@JwBJQbTMbS]je@o@rz@OpPCvEFdLX`k@DpGIhIMrLa@he@[f[o@jp@AzHG~HU`KEhGEbKA~AG`AOj@Qf@i@z@aAjBIn@{CtFiAxBaGhKiIpNcDdGoE~Hs@`AkAjBkAvBoBnDoBnDgBhDoFvJcEzGcE`IqGtLu@`ByFhLyM|WkKjUyCvGsC~FyElJw@dBy@zAOb@s@UiCGoBAeAAcAH]Pc@Xk@h@a@p@k@`BEzBG~DCbDGn@[|Bk@jD]fEeAtNgAHo@P_@TYXuBlCs@ZWDYAq@EmCg@k@zIa@nBq@`EyBjMgBxKcBlJwCxP_BxIe@hCSbBWvASdAReAVwARcBd@iCl@mDp@kDlCsOlBsKfByKxBkMp@aE`@oBj@{In@qQhAgTj@oLNeDRyDFcARe@Xe@HIpBm@vAU~ABtBPlCd@|@L^AJ?VI\\Up@i@VMpAWRCVU`CGnFM~KWzCGlB@`BLfARlCz@vD|AdDrArAd@pAZdBT|AHxGLjDHrADvANpAV~@XtEpBvMbG~ChAdDx@|B^jDZhELnEFtABt@@PT@?LB`@RNNNb@Cr@O^YTQB_@BWGSKU_@My@CkA?cADyFNcLHgLFgH@}@|AU|Ca@hDa@xC_@vEo@pCi@fD{@vBu@bHcClD{Ax@]hBi@lAa@jAY|Bc@lBSfAEtBA`FD~JN", locations: [
+    static let vehicle1 = Vehicle(route: "m_xkHlufmVQxC`@Hv@r@fAPtAUf@PnAXlAr@f@fAj@xDdAlJj@|GCfBo@lPCjCRnAb@v@\\^fApA@NJVRFPIJq@VmAjAqCxCqH~@sBf@En@Dd@l@RvC@bGK~Ta@`Km@pEg@dCmAdJwAbL}@xGaAjDcErIiElIsEdJaFbKg@hBUzAGnGAhWB|JWr@QTHRTdA^tCL`B?zDDlAIrCQpF@dEjAAvICdTA|i@G`UBzH?`C?hAAZTHPD\\YzFApG?vAD`@P?fAy@v@c@l@J\\Tf@lAz@`An@b@vARr@CdC}@dEkB^?jIyDxDaAxEa@vLFvHAC|M?~P@zNGb]AbFGbD@jEHx@CjDGzV_@jCqApCeBx@s@LsGFsA@oA^aAbAu@dBUfAKpAK`HIhEStBWxDCfI?to@?l@V?lC?jCGlGE?kA@w@T]F{CWGE`EA|@?f@eEC_C?_D?uFEqBQoAE}DWwHAW??p@@pAHhC|@pCbAtBn@dCHtCElC?lTOhSEdCw@lHWjGQbCYbAmAlCW~@{AfCiAlBgDrFgCzDaDxCsCrAyBd@iN`AaFpAyGnCgJpDwEzBgLjHuEhCgEpAmEXkUIqKBkGpA}DLeDWgDuAgC{BoCkDmGeIqGcIsA_AqB]cMFoSN{YReHLuB\\cDrAsBpAmBv@uA\\yAHqECeFGoGGi@A[[iAO{@Wk@i@Se@OaAo@cC_AcBw@i@mFgCaDsAyBi@sCOiAJeIEgDEq@Ou@[_Aw@{DqDl@kAVg@e@eAc@_AYaAt@u@Xo@{@{Ez@zEYn@u@t@|@`Cd@dAWf@m@jAzDpD~@v@t@Zp@NfDDdIDb@Cf@LfCXxErA`EpBZ^Z\\HPPhCRbEh@fCbApEDbCE`@W\\YDg@KSe@Ac@T{@z@cBz@_Az@g@fAa@zAQ@ANOl@@r@@rB@pBB`BBdFDnEAlDy@hDqB|@e@dBi@`Da@lFEnTQr\\UtGGnBJrBbArC|CFh@dAzAlBvCzEtG|BvCfDzD`CtAbC\\`CKfF_BdB_AtA[`DGrBE?YAgCI_N?aQBm]Hws@FiiA@o]DkFLkAr@eCxA{CXwB?sAc@oGOiBIyDAmMFgd@?kh@HkKAkOE_SEcLPqFT_FDuB?qAQuCUqF?cK?mWJ}GHy@f@aBvCaGvQs^|BwFv@_EvBoPv@_HV_DhA}IZcJJwT?cBVqEVgCNiC_@yFsApCw@~BiDbJeCvFaAhAcANw@IaAwASoABkCr@uSk@}GeAmJk@yDg@gAmAs@oAYg@Qm@s@]]_A[cAJ_@CF{@@q@", locations: [
         CLLocationCoordinate2D(latitude: 49.279848063981305, longitude: -122.91945081880527),
         CLLocationCoordinate2D(latitude: 49.25191140164777, longitude: -123.00389112539482),
         CLLocationCoordinate2D(latitude: 49.31994311243845, longitude: -123.01923812773032),
@@ -20,9 +20,7 @@ struct ActivityView: View {
         Shipment(city: "Vancouver", vehicles: [vehicle1])
       ]
     
-    @State var selectedShipment: Shipment?
-
-    
+    @Binding var selectedShipment: Shipment?
     @Binding var isShowing: Bool
     
     @State private var currHeight: CGFloat = 100
@@ -75,11 +73,12 @@ struct ActivityView: View {
                     VStack {
                         
                         ForEach(0..<ActivityView.shipments.count, id: \.self) { id in
-                            let marker = ActivityView.shipments[id]
+                            let shipment = ActivityView.shipments[id]
                           Button(action: {
 //                            buttonAction(marker)
+                              self.selectedShipment = shipment
                           }) {
-                              Text(marker.city )
+                              Text(shipment.city )
                           }
                         }
                     }
