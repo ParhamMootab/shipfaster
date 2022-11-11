@@ -11,7 +11,7 @@ import SwiftUI
 struct ShipfastrApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentViewTwo()
         }
     }
 }
