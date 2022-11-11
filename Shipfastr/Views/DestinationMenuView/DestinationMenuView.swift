@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DestinationMenuView: View {
     @State var locationList: [String] = Array(repeating: "", count: 20)
-    @State var destinationNum = 5
+    @State var destinationNum = 1
     var body: some View {
         VStack{
             HStack{
