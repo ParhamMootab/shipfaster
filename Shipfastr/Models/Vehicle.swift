@@ -21,6 +21,7 @@ struct Vehicle  {
 //    private lazy var newPath = GMSMutablePath()
 //    private lazy var carMarker = GMSMarker()
     
+
     var carView: UIImageView?
     
 //    init (coordinates: [CLLocationCoordinate2D] ,route: String?) {

@@ -18,13 +18,16 @@ struct ContentView: View {
                 switch selectedTab {
                 case 2:
                     HistoryView()
+                    
+                case 3:
+                    DestinationMenuView()
                 default:
 //                    MapViewControllerBridge()
 //                        .ignoresSafeArea(edges: .top)
                     HistoryView()
                 }
                 HomeView(isShowing: $showHomeSheet)
-                ActivityView(isShowing: $showActivitySheet)
+                ActivityView(selectedTab: $selectedTab,isShowing: $showActivitySheet)
             }
             Spacer()
 //            Divider()
