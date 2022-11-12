@@ -22,6 +22,7 @@ struct ActivityView: View {
     
     @Binding var selectedShipment: Shipment?
     @Binding var isShowing: Bool
+    @Binding var isAnimateButton: Bool
     
     @State private var currHeight: CGFloat = 100
     let minHeight: CGFloat = 100
@@ -76,6 +77,8 @@ struct ActivityView: View {
                             let shipment = ActivityView.shipments[id]
                           Button(action: {
 //                            buttonAction(marker)
+                              isAnimateButton = true
+                              isShowing = false
                               self.selectedShipment = shipment
                           }) {
                               Text(shipment.city )

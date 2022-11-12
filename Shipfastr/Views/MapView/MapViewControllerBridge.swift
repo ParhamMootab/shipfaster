@@ -12,13 +12,10 @@ import SwiftUI
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     @Binding var selectedShipment: Shipment?
-    var timer = Timer()
-//    private lazy var timer = Timer()
-//    var i: UInt
+    @Binding var isAniamationShowing: Bool
 
 
     func makeUIViewController(context: Context) -> MapViewController {
-    // Replace this line
       return MapViewController()
     }
 
@@ -27,8 +24,23 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
           $0.setMap(mapView: uiViewController.mapView)
           $0.addMarkers()
           $0.drawRouteOnMap()
-          $0.startAnimationTimer()
       }
+        if isAniamationShowing {
+            startAnimation()
+        } 
   }
+    
+    func startAnimation() {
+        selectedShipment?.vehicles.forEach {
+            $0.startAnimationTimer()
+        }
+    }
+    
+    func resetAnimation() {
+        selectedShipment?.vehicles.forEach {
+            $0.resetAnimation()
+        }
+    }
+    
     
 }

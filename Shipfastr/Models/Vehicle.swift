@@ -92,10 +92,11 @@ class Vehicle  {
    }
     
     
-    func resetTimer() {
+    func resetAnimation() {
         timer.invalidate()
         i = 0
         newPath.removeAllCoordinates()
+        map?.clear()
     }
     
      func startAnimationTimer() {
