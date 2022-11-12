@@ -11,22 +11,22 @@ import SwiftUI
 
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     
-  @Binding var selectedShipment: Shipment?
+    @Binding var selectedShipment: Shipment?
+//    private lazy var timer = Timer()
+//    var i: UInt
 
-  func makeUIViewController(context: Context) -> MapViewController {
+
+    func makeUIViewController(context: Context) -> MapViewController {
     // Replace this line
       return MapViewController()
-  }
+    }
 
-  func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
       selectedShipment?.vehicles.forEach {
           $0.addMarkers(uiViewController: uiViewController)
           $0.drawRouteOnMap(uiViewController: uiViewController)
       }
   }
-    
-//    func startCarAnimation(
-    
     
     
 }

@@ -20,7 +20,7 @@ struct ContentView: View {
                 case 2:
                     HistoryView()
                 default:
-                    MapViewControllerBridge(selectedShipment: $selectedShipment)
+                MapViewControllerBridge(selectedShipment: $selectedShipment)
                         .ignoresSafeArea(edges: .top)
 //                    HistoryView()
                 }
