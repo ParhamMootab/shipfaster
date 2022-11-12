@@ -70,7 +70,7 @@ class Vehicle  {
         self.map?.animate(with: camera)
     }
     
-    @objc func animatePolylinePath(uiViewController: MapViewController) {
+    @objc func animatePolylinePath() {
        //Iterate each valid coordinate on the path
 
        if i < path.count() {
@@ -99,7 +99,7 @@ class Vehicle  {
     }
     
      func startAnimationTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
     }
     
     

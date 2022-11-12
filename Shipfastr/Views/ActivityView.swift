@@ -51,7 +51,7 @@ struct ActivityView: View {
         .animation(.easeInOut, value: isShowing)
     }
     
-    var mainView: some View {
+    var mainView: some View { 
         VStack {
             // handle
             ZStack {

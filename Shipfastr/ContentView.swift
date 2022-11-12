@@ -20,9 +20,25 @@ struct ContentView: View {
                 case 2:
                     HistoryView()
                 default:
-                MapViewControllerBridge(selectedShipment: $selectedShipment)
-                        .ignoresSafeArea(edges: .top)
-//                    HistoryView()
+//                MapViewControllerBridge(selectedShipment: $selectedShipment)
+//                        .ignoresSafeArea(edges: .top)
+                   
+                    HistoryView()
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "box.truck")
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.black)
+                    })
+                    .frame(width: 50, height: 50)
+                    .background(.white)
+                    .cornerRadius(25)
+                    .offset(
+                        x: 150,
+                        y: 200
+                    
+                    )
                 }
                 HomeView(isShowing: $showHomeSheet)
                 ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet)
