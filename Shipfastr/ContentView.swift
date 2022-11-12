@@ -11,62 +11,119 @@ struct ContentView: View {
     @State var selectedTab = 0
     @State var showHomeSheet: Bool = true
     @State var showActivitySheet: Bool = false
+    @State var selectedShipment: Shipment?
+    @State var isShipmentAnimationShowing: Bool = false
+    @State var isShipmentAnimaitonEnded: Bool = false
+    @State var isShipmentShowing: Bool = false
+    
     
     var body: some View {
         VStack {
             ZStack {
                 switch selectedTab {
-                case 2:
+                case 2: 
                     HistoryView()
                     
                 case 3:
                     DestinationMenuView()
                 default:
-//                    MapViewControllerBridge()
-//                        .ignoresSafeArea(edges: .top)
-                    HistoryView()
+                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing , isAniamationShowing: $isShipmentAnimationShowing, isShipmentAnimaitonEnded: $isShipmentAnimaitonEnded)
+                        .ignoresSafeArea(edges: .top)
+                   
+//                    HistoryView()
+                    
+                    if isShipmentShowing {
+                        VStack {
+                            HStack {
+                                Button(action: {
+                                    withAnimation {
+                                        isShipmentShowing = false 
+                                    }
+                                    isShipmentAnimationShowing = false 
+                                    isShipmentAnimaitonEnded = true
+                                    
+                                    
+                                }, label: { 
+                                    Image(systemName: "chevron.backward")
+                                        .frame(width: 30, height: 30) 
+                                        .foregroundColor(.blue)
+                                })
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .background(.white)
+                                .cornerRadius(25)
+                                .offset(
+                                    x: 10,
+                                    y: 0
+                                )
+                                 
+                                Spacer()
+                            }
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    isShipmentAnimationShowing = true
+                                }, label: {
+                                    Image(systemName: "car.circle.fill")
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                })
+                                .frame(maxWidth: 50, maxHeight: 50)
+                                .background(.blue)
+                                .cornerRadius(25)
+                                .offset(
+                                    x: -10,
+                                    y: -200
+                                )
+                            }.transition(.asymmetric(insertion: .slide, removal: .opacity))
+                        }
+                    }
+                    
                 }
                 HomeView(isShowing: $showHomeSheet)
-                ActivityView(selectedTab: $selectedTab,isShowing: $showActivitySheet)
-            }
-            Spacer()
-//            Divider()
-            HStack {
-                Spacer()
-                Button(action: {
-                    self.selectedTab = 0
-                    showActivitySheet = false
-                    showHomeSheet.toggle()
-                }, label: {
-                    Image(systemName: self.selectedTab == 0 ? "house.fill" : "house")
-                        .scaleEffect(selectedTab == 0 ? 1.25 : 1.0 )
-                        .font(.system(size: 22))
-                        .foregroundColor(self.selectedTab == 0 ? .blue : .gray)
-                })
-                Spacer()
-                Button(action: {
-                    self.selectedTab = 1
-                    showHomeSheet = false
-                    showActivitySheet.toggle()
-                }, label: {
-                    Image(systemName: self.selectedTab == 1 ? "pin.fill" : "pin")
-                        .scaleEffect(selectedTab == 1 ? 1.25 : 1.0 )
-                        .font(.system(size: 22))
-                        .foregroundColor(self.selectedTab == 1 ? .pink : .gray)
-                })
+                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isAnimateButton: $isShipmentShowing)
 
-                Spacer()
-                Button(action: {
-                    self.selectedTab = 2
-                    showHomeSheet = false
-                    showActivitySheet = false
-                }, label: {
-                    Image(systemName: self.selectedTab == 2 ? "star.fill" : "star")
-                        .scaleEffect(selectedTab == 2 ? 1.25 : 1.0 )
-                        .font(.system(size: 22))
-                        .foregroundColor(self.selectedTab == 2 ? .yellow : .gray)
-                })
-                Spacer()
+            }
+//            Spacer()
+//            Divider()
+            if !isShipmentShowing {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.selectedTab = 0
+                        showActivitySheet = false
+                        showHomeSheet.toggle()
+                    }, label: {
+                        Image(systemName: self.selectedTab == 0 ? "house.fill" : "house")
+                            .scaleEffect(selectedTab == 0 ? 1.25 : 1.0 )
+                            .font(.system(size: 22))
+                            .foregroundColor(self.selectedTab == 0 ? .blue : .gray)
+                    })
+                    Spacer()
+                    Button(action: {
+                        self.selectedTab = 1
+                        showHomeSheet = false
+                        showActivitySheet.toggle()
+                    }, label: {
+                        Image(systemName: self.selectedTab == 1 ? "pin.fill" : "pin")
+                            .scaleEffect(selectedTab == 1 ? 1.25 : 1.0 )
+                            .font(.system(size: 22))
+                            .foregroundColor(self.selectedTab == 1 ? .pink : .gray)
+                    })
+                    
+                    Spacer()
+                    Button(action: {
+                        self.selectedTab = 2
+                        showHomeSheet = false
+                        showActivitySheet = false
+                    }, label: {
+                        Image(systemName: self.selectedTab == 2 ? "star.fill" : "star")
+                            .scaleEffect(selectedTab == 2 ? 1.25 : 1.0 )
+                            .font(.system(size: 22))
+                            .foregroundColor(self.selectedTab == 2 ? .yellow : .gray)
+                    })
+                    Spacer()
+                }
             }
         }
 

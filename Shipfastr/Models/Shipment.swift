@@ -9,6 +9,6 @@ import CoreLocation
 
 struct Shipment {
   var city: String
-  var coordinate: CLLocationCoordinate2D
-//    var vehicles: [vehicle]
+//  var coordinate: CLLocationCoordinate2D
+    var vehicles: [Vehicle]
 }

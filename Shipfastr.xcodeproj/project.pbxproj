@@ -15,6 +15,8 @@
 		A8491A93291B086A00D40B01 /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A92291B086A00D40B01 /* MapViewControllerBridge.swift */; };
 		A8491A96291B088000D40B01 /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A95291B088000D40B01 /* Shipment.swift */; };
 		A8491A98291B088F00D40B01 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A97291B088F00D40B01 /* Vehicle.swift */; };
+		A8491A9A291DF12700D40B01 /* ContentViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A99291DF12700D40B01 /* ContentViewTwo.swift */; };
+		A8491A9C291DF21200D40B01 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A9B291DF21200D40B01 /* City.swift */; };
 		F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */; };
 		F88D4C22291AFA6500896275 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C21291AFA6500896275 /* ContentView.swift */; };
 		F88D4C24291AFA6600896275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88D4C23291AFA6600896275 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		A8491A92291B086A00D40B01 /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		A8491A95291B088000D40B01 /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
 		A8491A97291B088F00D40B01 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A8491A99291DF12700D40B01 /* ContentViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTwo.swift; sourceTree = "<group>"; };
+		A8491A9B291DF21200D40B01 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.release.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.release.xcconfig"; sourceTree = "<group>"; };
 		D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shipfastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D4C1C291AFA6500896275 /* Shipfastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shipfastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,7 @@
 			children = (
 				A8491A95291B088000D40B01 /* Shipment.swift */,
 				A8491A97291B088F00D40B01 /* Vehicle.swift */,
+				A8491A9B291DF21200D40B01 /* City.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				A8491A88291B081500D40B01 /* Views */,
 				F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */,
 				F88D4C21291AFA6500896275 /* ContentView.swift */,
+				A8491A99291DF12700D40B01 /* ContentViewTwo.swift */,
 				F88D4C23291AFA6600896275 /* Assets.xcassets */,
 				F88D4C25291AFA6600896275 /* Preview Content */,
 			);
@@ -291,9 +297,11 @@
 				A8491A91291B085200D40B01 /* MapViewController.swift in Sources */,
 				A8491A8C291B083200D40B01 /* ActivityView.swift in Sources */,
 				A8491A93291B086A00D40B01 /* MapViewControllerBridge.swift in Sources */,
+				A8491A9C291DF21200D40B01 /* City.swift in Sources */,
 				A8491A8E291B083D00D40B01 /* HistoryView.swift in Sources */,
 				F88D4C22291AFA6500896275 /* ContentView.swift in Sources */,
 				F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */,
+				A8491A9A291DF12700D40B01 /* ContentViewTwo.swift in Sources */,
 				F8A97F3F291DB89200DD9EBF /* OptimizerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shipfastr/Preview Content\"";
+				DEVELOPMENT_TEAM = SXGK4ZATLS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shipfastr/Preview Content\"";
+				DEVELOPMENT_TEAM = SXGK4ZATLS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
