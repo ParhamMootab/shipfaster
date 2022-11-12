@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+//    State for showing views
     @State var selectedTab = 0
     @State var showHomeSheet: Bool = true
     @State var showActivitySheet: Bool = false
+    
+    
+//    state for showing shipment animation
     @State var selectedShipment: Shipment?
-    @State var isShipmentAnimationShowing: Bool = false
-    @State var isShipmentAnimaitonEnded: Bool = false
     @State var isShipmentShowing: Bool = false
     
     
@@ -24,9 +27,9 @@ struct ContentView: View {
                 case 2: 
                     HistoryView()
                 default:
-                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing , isAniamationShowing: $isShipmentAnimationShowing, isShipmentAnimaitonEnded: $isShipmentAnimaitonEnded)
-                        .ignoresSafeArea(edges: .top)
-                   
+                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
+                        .ignoresSafeArea()
+                    
 //                    HistoryView()
                     
                     if isShipmentShowing {
@@ -34,12 +37,13 @@ struct ContentView: View {
                             HStack {
                                 Button(action: {
                                     withAnimation {
-                                        isShipmentShowing = false 
+                                        isShipmentShowing = false
+                                        
                                     }
-                                    isShipmentAnimationShowing = false 
-                                    isShipmentAnimaitonEnded = true
-                                    
-                                    
+                                    showActivitySheet = true
+                                    selectedShipment?.vehicles.forEach {
+                                        $0.resetAnimation()
+                                    }
                                 }, label: { 
                                     Image(systemName: "chevron.backward")
                                         .frame(width: 30, height: 30) 
@@ -58,8 +62,10 @@ struct ContentView: View {
                             Spacer()
                             HStack {
                                 Spacer()
-                                Button(action: {
-                                    isShipmentAnimationShowing = true
+                                Button(action: { 
+                                    selectedShipment?.vehicles.forEach {
+                                        $0.startAnimationTimer()
+                                    }
                                 }, label: {
                                     Image(systemName: "car.circle.fill")
                                         .frame(width: 30, height: 30)
@@ -72,13 +78,14 @@ struct ContentView: View {
                                     x: -10,
                                     y: -200
                                 )
+                                .disabled(isShipmentShowing == false)
                             }.transition(.asymmetric(insertion: .slide, removal: .opacity))
                         }
                     }
                     
                 }
                 HomeView(isShowing: $showHomeSheet)
-                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isAnimateButton: $isShipmentShowing)
+                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing)
             }
 //            Spacer()
 //            Divider()
