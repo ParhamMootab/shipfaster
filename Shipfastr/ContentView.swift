@@ -26,6 +26,9 @@ struct ContentView: View {
                 switch selectedTab {
                 case 2: 
                     HistoryView()
+                    
+                case 3:
+                    DestinationMenuView()
                 default:
                     MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()
