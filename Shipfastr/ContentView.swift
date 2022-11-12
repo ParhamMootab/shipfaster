@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var showActivitySheet: Bool = false
     @State var selectedShipment: Shipment?
     @State var isShipmentAnimationShowing: Bool = false
-    @State var isShipmentAnimaitonEnded: Bool = true
+    @State var isShipmentAnimaitonEnded: Bool = false
     @State var isShipmentShowing: Bool = false
     
     
@@ -21,10 +21,10 @@ struct ContentView: View {
         VStack {
             ZStack {
                 switch selectedTab {
-                case 2:
+                case 2: 
                     HistoryView()
                 default:
-                MapViewControllerBridge(selectedShipment: $selectedShipment, isAniamationShowing: $isShipmentAnimationShowing)
+                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing , isAniamationShowing: $isShipmentAnimationShowing, isShipmentAnimaitonEnded: $isShipmentAnimaitonEnded)
                         .ignoresSafeArea(edges: .top)
                    
 //                    HistoryView()
@@ -34,17 +34,24 @@ struct ContentView: View {
                             HStack {
                                 Button(action: {
                                     withAnimation {
-                                        isShipmentShowing = false
+                                        isShipmentShowing = false 
                                     }
-                                    isShipmentAnimationShowing = false
+                                    isShipmentAnimationShowing = false 
+                                    isShipmentAnimaitonEnded = true
+                                    
                                     
                                 }, label: { 
                                     Image(systemName: "chevron.backward")
                                         .frame(width: 30, height: 30) 
                                         .foregroundColor(.blue)
                                 })
-                                .frame(maxWidth: 50, maxHeight: 50)
+                                .frame(maxWidth: 40, maxHeight: 40)
+                                .background(.white)
                                 .cornerRadius(25)
+                                .offset(
+                                    x: 10,
+                                    y: 0
+                                )
                                  
                                 Spacer()
                             }
@@ -52,10 +59,9 @@ struct ContentView: View {
                             HStack {
                                 Spacer()
                                 Button(action: {
-//                                    start animation
                                     isShipmentAnimationShowing = true
                                 }, label: {
-                                    Image(systemName: "box.truck")
+                                    Image(systemName: "car.circle.fill")
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.white)
                                 })
