@@ -27,6 +27,7 @@ class Vehicle  {
     private lazy var timer = Timer()
     
     
+
     var carView: UIImageView?
     
     init (route: String?, locations: [CLLocationCoordinate2D]) {
