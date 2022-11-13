@@ -36,49 +36,55 @@ struct DestinationMenuView: View {
                 }
             }
             ScrollView{
-            ForEach(1..<destinationNum, id: \.self){id in
-                HStack{
-                    ZStack{
-                        Capsule()
-                            .frame(width: .infinity,height: 60.0)
-                            .foregroundColor(Color("DarkGray"))
-                        
-                        TextField("Destination", text: $locationList[id])
-                            .padding(.leading)
-                            .frame(height: 50)
-                    }
-                    Button {
-                        locationList.remove(at: id)
-                        for i in (id+1)..<locationList.count{
-                            if locationList[i] != ""{
-                                locationList[i - 1] = locationList[i]
-                            }
+                ForEach(1..<destinationNum, id: \.self){id in
+                    HStack{
+                        ZStack{
+                            Capsule()
+                                .frame(width: .infinity,height: 60.0)
+                                .foregroundColor(Color("DarkGray"))
+                            
+                            TextField("Destination", text: $locationList[id])
+                                .padding(.leading)
+                                .frame(height: 50)
                         }
-                        locationList.removeLast()
-                        destinationNum -= 1
-                    } label: {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(Color.red)
-                            .opacity(0.6)
+                        Button {
+                            locationList.remove(at: id)
+                            for i in (id+1)..<locationList.count{
+                                if locationList[i] != ""{
+                                    locationList[i - 1] = locationList[i]
+                                }
+                            }
+                            locationList.removeLast()
+                            destinationNum -= 1
+                        } label: {
+                            Image(systemName: "xmark")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(Color.red)
+                                .opacity(0.6)
+                        }
                     }
                 }
-            }
             }
             
             let space = CGFloat(650 - destinationNum * 65)
             Spacer()
                 .frame(height: space)
             Button {
-                let optimizedRoutes = OptimizerManager(addresses: locationList).response
-                if let optimizedRoutes = optimizedRoutes {
-                    selectedShipment = shipmentMaker(optimzedRoutes: optimizedRoutes)
-                }else{
-                    // Alert
+                Task{
+                    do{
+                        let optimizer = OptimizerManager(addresses: locationList)
+                        
+                        let optimizedRoutes = try await optimizer.sendRequest()
+                        if let optimizedRoutes = optimizedRoutes {
+                            selectedShipment = shipmentMaker(optimzedRoutes: optimizedRoutes)
+                        }
+                    }catch{
+                        print("Error from button")
+                    }
                 }
                 
-                selectedTab = 3
+                selectedTab = 2
                 
             } label: {
                 HStack {
@@ -94,9 +100,6 @@ struct DestinationMenuView: View {
                 
             }
             
-            //            if locationList.count >= 1{
-            //                Text(locationList.joined(separator: " "))
-            //            }
         }
         .padding([.leading, .trailing], 30.0)
     }
