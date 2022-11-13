@@ -53,11 +53,15 @@ struct HomeView: View {
             .gesture(dragGesture)
             ZStack {
                 VStack {
-                    Text("This is cotent area")
-                        .font(.system(size: 25, weight: .regular))
+                    Text("Choose a Map Styling")
+                        .font(.system(size: 18, weight: .regular))
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.bottom, 10)
+                    
+                    HStack {
+                        
+                    }
                 }
             }
             .frame(maxWidth: .infinity)
