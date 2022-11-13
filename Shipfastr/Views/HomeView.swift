@@ -9,7 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     
+    var mapStylings = [MapStyling( mapStyle: "dark-theme"), MapStyling(mapStyle: "main-theme"), MapStyling(mapStyle :"route-focus"), MapStyling(mapStyle: "plain-theme")]
+    
     @Binding var isShowing: Bool
+    @Binding var selectedMapStyle: MapStyling?
+    
     
     @State private var currHeight: CGFloat = 100
     let minHeight: CGFloat = 100
@@ -59,9 +63,23 @@ struct HomeView: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.bottom, 10)
                     
+                    Spacer()
                     HStack {
-                        
+                        ForEach(0..<mapStylings.count, id: \.self) { id in
+                            let mapStyling = mapStylings[id]
+                            Spacer()
+                            Button(action: {
+                                selectedMapStyle = mapStyling
+                            }) {
+                                Image(mapStyling.mapStyle ?? "map")
+                                    .resizable()
+                                    .frame(maxWidth: 70, maxHeight: 70)
+                                    .cornerRadius(30)
+                            }
+                            Spacer()
+                        }
                     }
+                    Spacer()
                 }
             }
             .frame(maxWidth: .infinity)

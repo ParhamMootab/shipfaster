@@ -12,7 +12,9 @@ import SwiftUI
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     @Binding var selectedShipment: Shipment?
+    @Binding var selectedMapStyle: MapStyling?
     @Binding var isShipmentShowing: Bool
+
 
     func makeUIViewController(context: Context) -> MapViewController {
       return MapViewController()
@@ -26,6 +28,8 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
                 $0.drawRouteOnMap()
             }
         }
+        selectedMapStyle?.setMap(mapView: uiViewController.mapView)
+        selectedMapStyle?.setMapStyling()
     }
     
 }

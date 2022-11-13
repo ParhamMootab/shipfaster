@@ -69,12 +69,11 @@ struct ActivityView: View {
                 VStack {
                     //                    This is the content area to edit
                     Text("Demo Shipments")
-                        .font(.system(size: 25, weight: .regular))
+                        .font(.system(size: 18, weight: .regular))
                         .multilineTextAlignment(.center)
-                    //                        .fixedSize(horizontal: false, vertical: true)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.bottom, 10)
                     VStack {
-                        
                         ForEach(0..<ActivityView.shipments.count, id: \.self) { id in
                             let shipment = ActivityView.shipments[id]
                             Button(action: {
