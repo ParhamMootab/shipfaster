@@ -69,7 +69,7 @@ struct ActivityView: View {
                 VStack {
                     //                    This is the content area to edit
                     Text("Demo Shipments")
-                        .font(.system(size: 18, weight: .regular))
+                        .font(.system(size: 20, weight: .regular))
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.bottom, 10)
@@ -82,6 +82,7 @@ struct ActivityView: View {
                                 self.selectedShipment = shipment
                             }) {
                                 Text(shipment.city )
+                                    .font(.system(size: 25, weight: .regular))
                             }
                         }
                     }

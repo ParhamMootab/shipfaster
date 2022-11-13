@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    var mapStylings = [MapStyling( mapStyle: "dark-theme"), MapStyling(mapStyle: "main-theme"), MapStyling(mapStyle :"route-focus"), MapStyling(mapStyle: "plain-theme")]
+    var mapStylings = [MapStyling( mapStyle: "dark-theme"), MapStyling(mapStyle: "main-theme"), MapStyling(mapStyle :"route-focus"), MapStyling(mapStyle: "default-theme")]
     
     @Binding var isShowing: Bool
     @Binding var selectedMapStyle: MapStyling?
@@ -58,7 +58,7 @@ struct HomeView: View {
             ZStack {
                 VStack {
                     Text("Choose a Map Styling")
-                        .font(.system(size: 18, weight: .regular))
+                        .font(.system(size: 20, weight: .regular))
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.bottom, 10)
@@ -74,7 +74,7 @@ struct HomeView: View {
                                 Image(mapStyling.mapStyle ?? "map")
                                     .resizable()
                                     .frame(maxWidth: 70, maxHeight: 70)
-                                    .cornerRadius(30)
+                                    .cornerRadius(25)
                             }
                             Spacer()
                         }
