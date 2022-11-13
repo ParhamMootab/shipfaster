@@ -32,9 +32,7 @@ struct ContentView: View {
                 default:
                     MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()
-                    
-//                    HistoryView()
-                    
+                                        
                     if isShipmentShowing {
                         VStack {
                             HStack {

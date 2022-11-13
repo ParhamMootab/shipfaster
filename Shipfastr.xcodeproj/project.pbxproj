@@ -76,6 +76,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A802F5E229207A9A00BC02A4 /* MapStyle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapStyle;
+			sourceTree = "<group>";
+		};
 		A8491A88291B081500D40B01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +135,7 @@
 		F88D4C1E291AFA6500896275 /* Shipfastr */ = {
 			isa = PBXGroup;
 			children = (
+				A802F5E229207A9A00BC02A4 /* MapStyle */,
 				F8A97F3D291DB88000DD9EBF /* Managers */,
 				A8491A94291B087100D40B01 /* Models */,
 				A8491A88291B081500D40B01 /* Views */,
