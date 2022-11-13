@@ -28,7 +28,7 @@ struct ContentView: View {
                     HistoryView()
                     
                 case 3:
-                    DestinationMenuView()
+                    DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment)
                 default:
                     MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()
@@ -86,7 +86,7 @@ struct ContentView: View {
                     
                 }
                 HomeView(isShowing: $showHomeSheet)
-                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing)
+                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing, selectedTab: $selectedTab)
             }
 //            Spacer()
 //            Divider()

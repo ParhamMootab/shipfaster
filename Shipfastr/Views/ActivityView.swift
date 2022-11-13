@@ -18,12 +18,13 @@ struct ActivityView: View {
     ])
     
     static let shipments = [
-        Shipment(city: "Vancouver", vehicles: [vehicle1])
+        Shipment(vehicles: [vehicle1])
     ]
     
     @Binding var selectedShipment: Shipment?
     @Binding var isShowing: Bool
     @Binding var isShipmentShowing: Bool
+    @Binding var selectedTab: Int
     
     @State private var currHeight: CGFloat = 100
     let minHeight: CGFloat = 100
@@ -82,9 +83,23 @@ struct ActivityView: View {
                                 isShowing = false
                                 self.selectedShipment = shipment
                             }) {
-                                Text(shipment.city )
+                                Text("Vancouver" )
                             }
                         }
+                        Button {
+                            selectedTab = 3
+                            
+                        } label: {
+                            Text("Get Started!")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .frame(width: 300, height: 60)
+                                .background(Color("MainBlue"))
+                                .foregroundColor(Color.white)
+                                .clipShape(Capsule())
+    
+                        }
+                        
                     }
                     .frame(width: .infinity)
                 }

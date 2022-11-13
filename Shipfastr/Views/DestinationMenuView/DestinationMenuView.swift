@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 struct DestinationMenuView: View {
     @State var locationList: [String] = Array(repeating: "", count: 20)
     @State var destinationNum = 1
+    @Binding var selectedTab: Int
+    @Binding var selectedShipment: Shipment?
     var body: some View {
         VStack{
             HStack{
@@ -32,6 +35,7 @@ struct DestinationMenuView: View {
                         .foregroundColor(Color("MainBlue"))
                 }
             }
+            ScrollView{
             ForEach(1..<destinationNum, id: \.self){id in
                 HStack{
                     ZStack{
@@ -43,8 +47,6 @@ struct DestinationMenuView: View {
                             .padding(.leading)
                             .frame(height: 50)
                     }
-                    
-                    
                     Button {
                         locationList.remove(at: id)
                         for i in (id+1)..<locationList.count{
@@ -63,19 +65,63 @@ struct DestinationMenuView: View {
                     }
                 }
             }
+            }
+            
             let space = CGFloat(650 - destinationNum * 65)
             Spacer()
                 .frame(height: space)
-            if locationList.count >= 1{
-                Text(locationList.joined(separator: " "))
+            Button {
+                let optimizedRoutes = OptimizerManager(addresses: locationList).response
+                if let optimizedRoutes = optimizedRoutes {
+                    selectedShipment = shipmentMaker(optimzedRoutes: optimizedRoutes)
+                }else{
+                    // Alert
+                }
+                
+                selectedTab = 3
+                
+            } label: {
+                HStack {
+                    Image(systemName: "location.fill")
+                    Text("Done")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+                .frame(width: 300, height: 60)
+                .background(Color("MainBlue"))
+                .foregroundColor(Color.white)
+                .clipShape(Capsule())
+                
             }
+            
+            //            if locationList.count >= 1{
+            //                Text(locationList.joined(separator: " "))
+            //            }
         }
         .padding([.leading, .trailing], 30.0)
+    }
+    
+    func shipmentMaker(optimzedRoutes: OptimizerResponse) -> Shipment {
+        var shipment: Shipment
+        var vehicles: [Vehicle] = []
+        var locations: [CLLocationCoordinate2D] = []
+        for(_, info) in optimzedRoutes{
+            if let info = info{
+                for coordinate in info.coordinates {
+                    locations.append(CLLocationCoordinate2D(latitude: coordinate.lat, longitude: coordinate.lng))
+                }
+                let vehicle = Vehicle(route: info.overviewPolyline, locations: locations)
+                vehicles.append(vehicle)
+            }
+            
+        }
+        shipment = Shipment(vehicles: vehicles)
+        return shipment
     }
 }
 
 struct DestinationMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationMenuView()
+        DestinationMenuView(selectedTab: .constant(3), selectedShipment: .constant(nil))
     }
 }
