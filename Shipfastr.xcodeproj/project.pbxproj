@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		407A21820E0B086194B98295 /* Pods_Shipfastr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */; };
+		A802F5E429207E6400BC02A4 /* dark-theme.json in Resources */ = {isa = PBXBuildFile; fileRef = A802F5E329207E6400BC02A4 /* dark-theme.json */; };
+		A802F5E629207E8000BC02A4 /* main-theme.json in Resources */ = {isa = PBXBuildFile; fileRef = A802F5E529207E8000BC02A4 /* main-theme.json */; };
+		A802F5E829207E9600BC02A4 /* route-focus.json in Resources */ = {isa = PBXBuildFile; fileRef = A802F5E729207E9600BC02A4 /* route-focus.json */; };
+		A802F5EC2920914E00BC02A4 /* MapStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802F5EB2920914E00BC02A4 /* MapStyling.swift */; };
+		A802F5EE2920B41400BC02A4 /* default-theme.json in Resources */ = {isa = PBXBuildFile; fileRef = A802F5ED2920B41400BC02A4 /* default-theme.json */; };
 		A8491A8A291B082300D40B01 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A89291B082300D40B01 /* HomeView.swift */; };
 		A8491A8C291B083200D40B01 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A8B291B083200D40B01 /* ActivityView.swift */; };
 		A8491A8E291B083D00D40B01 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A8D291B083D00D40B01 /* HistoryView.swift */; };
@@ -32,6 +37,11 @@
 
 /* Begin PBXFileReference section */
 		1C1237BC343E6129BA62E5FF /* Pods-Shipfastr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.debug.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.debug.xcconfig"; sourceTree = "<group>"; };
+		A802F5E329207E6400BC02A4 /* dark-theme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dark-theme.json"; sourceTree = "<group>"; };
+		A802F5E529207E8000BC02A4 /* main-theme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "main-theme.json"; sourceTree = "<group>"; };
+		A802F5E729207E9600BC02A4 /* route-focus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "route-focus.json"; sourceTree = "<group>"; };
+		A802F5EB2920914E00BC02A4 /* MapStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyling.swift; sourceTree = "<group>"; };
+		A802F5ED2920B41400BC02A4 /* default-theme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "default-theme.json"; sourceTree = "<group>"; };
 		A8491A89291B082300D40B01 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A8491A8B291B083200D40B01 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		A8491A8D291B083D00D40B01 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -39,8 +49,6 @@
 		A8491A92291B086A00D40B01 /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		A8491A95291B088000D40B01 /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
 		A8491A97291B088F00D40B01 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		A8491A99291DF12700D40B01 /* ContentViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTwo.swift; sourceTree = "<group>"; };
-		A8491A9B291DF21200D40B01 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.release.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.release.xcconfig"; sourceTree = "<group>"; };
 		D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shipfastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80830A52920838A0052727C /* OptimizerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizerResponse.swift; sourceTree = "<group>"; };
@@ -86,6 +94,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A802F5E229207A9A00BC02A4 /* MapStyle */ = {
+			isa = PBXGroup;
+			children = (
+				A802F5E329207E6400BC02A4 /* dark-theme.json */,
+				A802F5E529207E8000BC02A4 /* main-theme.json */,
+				A802F5E729207E9600BC02A4 /* route-focus.json */,
+				A802F5ED2920B41400BC02A4 /* default-theme.json */,
+			);
+			path = MapStyle;
+			sourceTree = "<group>";
+		};
 		A8491A88291B081500D40B01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +132,7 @@
 			children = (
 				A8491A95291B088000D40B01 /* Shipment.swift */,
 				A8491A97291B088F00D40B01 /* Vehicle.swift */,
+				A802F5EB2920914E00BC02A4 /* MapStyling.swift */,
 				A8491A9B291DF21200D40B01 /* City.swift */,
 				F80830A52920838A0052727C /* OptimizerResponse.swift */,
 			);
@@ -148,12 +168,12 @@
 		F88D4C1E291AFA6500896275 /* Shipfastr */ = {
 			isa = PBXGroup;
 			children = (
+				A802F5E229207A9A00BC02A4 /* MapStyle */,
 				F8A97F3D291DB88000DD9EBF /* Managers */,
 				A8491A94291B087100D40B01 /* Models */,
 				A8491A88291B081500D40B01 /* Views */,
 				F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */,
 				F88D4C21291AFA6500896275 /* ContentView.swift */,
-				A8491A99291DF12700D40B01 /* ContentViewTwo.swift */,
 				F88D4C23291AFA6600896275 /* Assets.xcassets */,
 				F88D4C25291AFA6600896275 /* Preview Content */,
 			);
@@ -247,7 +267,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A802F5E629207E8000BC02A4 /* main-theme.json in Resources */,
+				A802F5E429207E6400BC02A4 /* dark-theme.json in Resources */,
 				F88D4C27291AFA6600896275 /* Preview Assets.xcassets in Resources */,
+				A802F5E829207E9600BC02A4 /* route-focus.json in Resources */,
+				A802F5EE2920B41400BC02A4 /* default-theme.json in Resources */,
 				F88D4C24291AFA6600896275 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,8 +333,8 @@
 				A8491A91291B085200D40B01 /* MapViewController.swift in Sources */,
 				A8491A8C291B083200D40B01 /* ActivityView.swift in Sources */,
 				A8491A93291B086A00D40B01 /* MapViewControllerBridge.swift in Sources */,
-				A8491A9C291DF21200D40B01 /* City.swift in Sources */,
 				A8491A8E291B083D00D40B01 /* HistoryView.swift in Sources */,
+				A802F5EC2920914E00BC02A4 /* MapStyling.swift in Sources */,
 				F88D4C22291AFA6500896275 /* ContentView.swift in Sources */,
 				F80830A62920838A0052727C /* OptimizerResponse.swift in Sources */,
 				F824FD18292187FF00FA90AE /* AutocompleteViewController.swift in Sources */,

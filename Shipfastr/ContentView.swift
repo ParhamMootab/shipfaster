@@ -14,6 +14,9 @@ struct ContentView: View {
     @State var showHomeSheet: Bool = true
     @State var showActivitySheet: Bool = false
     
+//    State for map styling
+    @State var selectedMapStyle: MapStyling?
+    
     
 //    state for showing shipment animation
     @State var selectedShipment: Shipment?
@@ -25,14 +28,15 @@ struct ContentView: View {
             ZStack {
                 switch selectedTab {
                 case 2: 
+
                     HistoryView(viewIdx: 0)
                     
                 case 3:
                     DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment)
                 default:
-                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
+                    MapViewControllerBridge(selectedShipment: $selectedShipment, selectedMapStyle:  $selectedMapStyle, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()
-                    
+
                     if isShipmentShowing {
                         VStack {
                             HStack {
@@ -85,12 +89,14 @@ struct ContentView: View {
                     }
                     
                 }
+
                 HomeView(isShowing: $showHomeSheet)
                 ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing, selectedTab: $selectedTab)
+
             }
-//            Spacer()
-//            Divider()
+
             if !isShipmentShowing {
+//                Spacer()
                 HStack {
                     Spacer()
                     Button(action: {
