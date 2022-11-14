@@ -25,8 +25,7 @@ struct ContentView: View {
             ZStack {
                 switch selectedTab {
                 case 2: 
-                    MapViewControllerBridge(selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
-                        .ignoresSafeArea()
+                    HistoryView(viewIdx: 0)
                     
                 case 3:
                     DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment)

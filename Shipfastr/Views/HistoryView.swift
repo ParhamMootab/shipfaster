@@ -13,11 +13,11 @@ struct HistoryView: View {
         
         switch viewIdx{
         case 1:
-            HistoryShipment(date: "Nov 13", time: "12:12 PM", numOfVehicle: "1", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["701 W Georgia St", "900 Canada Pl"])
+            HistoryShipment(date: "Nov 13", time: "12:12 PM", numOfVehicle: "1", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["701 W Georgia St", "900 Canada Pl"], viewIdx: $viewIdx)
         case 2:
-            HistoryShipment(date: "Nov 12", time: "1:00 PM", numOfVehicle: "3", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["4700 Kingsway", "8888 University Dr", "4500 Still Creek Dr"])
+            HistoryShipment(date: "Nov 12", time: "1:00 PM", numOfVehicle: "3", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["4700 Kingsway", "8888 University Dr", "4500 Still Creek Dr"], viewIdx: $viewIdx)
         case 3:
-            HistoryShipment(date: "Nov 11", time: "9:00 AM", numOfVehicle: "2", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["1895 Lower Mall", "3211 Grant McConachie Way"])
+            HistoryShipment(date: "Nov 11", time: "9:00 AM", numOfVehicle: "2", timeSpent: "6h 35m", source: "1050 Beach Ave", destinations: ["1895 Lower Mall", "3211 Grant McConachie Way"], viewIdx: $viewIdx)
         case 0:
             List{
                 Button {

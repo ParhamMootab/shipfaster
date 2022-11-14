@@ -14,13 +14,27 @@ struct HistoryShipment: View {
     @State var timeSpent: String
     @State var source: String
     @State var destinations: [String]
+    @Binding var viewIdx: Int
     
     var body: some View {
         VStack{
-            Text("Shipment Information")
-                .font(.title)
-                .frame(alignment: .top)
-                .foregroundColor(Color.white)
+            HStack {
+                Button {
+                    viewIdx = 0
+                } label: {
+                    Image(systemName: "arrowshape.turn.up.backward.fill")
+                        .resizable()
+                        .foregroundColor(Color.white)
+                        .frame(width: 30.0, height: 30.0)
+                        
+                }
+                
+                Text("Shipment Information")
+                    .font(.title)
+                    .frame(alignment: .top)
+                    .foregroundColor(Color.white)
+                
+            }
             Spacer()
             
             List{
@@ -77,6 +91,6 @@ struct HistoryShipment: View {
 
 struct HistoryShipment_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryShipment(date: "Nov 13", time: "10:10 AM", numOfVehicle: "5", timeSpent: "2h 53m", source: "1330 Burrard St", destinations: ["1277 Nelson St", "935 Marine Dr","935 Harbourside Dr"])
+        HistoryShipment(date: "Nov 13", time: "10:10 AM", numOfVehicle: "5", timeSpent: "2h 53m", source: "1330 Burrard St", destinations: ["1277 Nelson St", "935 Marine Dr","935 Harbourside Dr"], viewIdx: .constant(3))
     }
 }
