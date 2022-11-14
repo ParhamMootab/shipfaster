@@ -31,7 +31,7 @@ struct ContentView: View {
                     HistoryView(viewIdx: 0)
                     
                 case 3:
-                    DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment)
+                    DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment, isShipmentShowing: $isShipmentShowing)
                         .onAppear {
                             showActivitySheet = false
                         }
