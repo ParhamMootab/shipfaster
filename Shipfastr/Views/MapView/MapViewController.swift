@@ -25,7 +25,7 @@ class MapViewController: UIViewController {
        marker.snippet = "Canada"
        marker.map = mapView
 
-       print(GMSServices.openSourceLicenseInfo())    }
+       print(GMSServices.openSourceLicenseInfo())}
     
 
 }

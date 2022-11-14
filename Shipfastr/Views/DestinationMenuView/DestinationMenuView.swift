@@ -7,6 +7,7 @@
 
 import SwiftUI
 import GoogleMaps
+import GooglePlaces
 
 struct DestinationMenuView: View {
     @State var locationList: [String] = Array(repeating: "", count: 20)
@@ -15,6 +16,7 @@ struct DestinationMenuView: View {
     @Binding var selectedShipment: Shipment?
     var body: some View {
         VStack{
+            
             HStack{
                 ZStack{
                     Capsule()
@@ -24,6 +26,7 @@ struct DestinationMenuView: View {
                     TextField("Source", text: $locationList[0])
                         .padding(.leading)
                         .frame(height: 50)
+                        
                 }
                 
                 Button {
