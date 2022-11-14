@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Dummy: View {
     var body: some View {
-        AutocompleteViewControllerBridge()
+//        AutocompleteViewControllerBridge()
+//        preview
+        Color(.black)
     }
 }
 

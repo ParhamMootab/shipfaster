@@ -16,7 +16,7 @@ struct DestinationMenuView: View {
     @Binding var selectedShipment: Shipment?
     var body: some View {
         VStack{
-            
+    
             HStack{
                 ZStack{
                     Capsule()
@@ -96,11 +96,11 @@ struct DestinationMenuView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                 }
-                .frame(width: 300, height: 60)
+                .frame(width: 300, height: 50)
                 .background(Color("MainBlue"))
                 .foregroundColor(Color.white)
                 .clipShape(Capsule())
-                
+                .padding(.bottom, 50)
             }
             
         }

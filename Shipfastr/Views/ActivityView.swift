@@ -82,10 +82,17 @@ struct ActivityView: View {
                                 isShowing = false
                                 self.selectedShipment = shipment
                             }) {
-
                                 Text("Vancouver" )
+                                    .font(.system(size:22, weight: .regular))
+                                
                             }
                         }
+                        Spacer()
+                        Text("Add new shipment")
+                            .font(.system(size: 20, weight: .regular))
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.top, 10)
                         Button {
                             selectedTab = 3
                             
@@ -93,13 +100,13 @@ struct ActivityView: View {
                             Text("Get Started!")
                                 .font(.title3)
                                 .fontWeight(.bold)
-                                .frame(width: 300, height: 60)
+                                .frame(width: 200, height: 50)
                                 .background(Color("MainBlue"))
                                 .foregroundColor(Color.white)
                                 .clipShape(Capsule())
     
                         }
-                        
+                        Spacer()
                     }
                     .frame(width: .infinity)
                 }
