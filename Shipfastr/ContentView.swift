@@ -55,6 +55,7 @@ struct ContentView: View {
                                     selectedShipment?.vehicles.forEach {
                                         $0.resetAnimation()
                                     }
+                                    selectedShipment = nil
                                 }, label: { 
                                     Image(systemName: "chevron.backward")
                                         .frame(width: 30, height: 30) 
