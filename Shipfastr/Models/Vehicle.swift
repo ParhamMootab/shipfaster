@@ -29,8 +29,8 @@ class Vehicle  {
     private lazy var timer = Timer()
     
 
-    var carView: UIImage?
-    
+    var carView: UIImageView?
+
     init (route: String?, locations: [CLLocationCoordinate2D]) {
         self.route = route
         self.locations = locations
@@ -60,9 +60,9 @@ class Vehicle  {
         polyline.map = self.map
 
 
-        let car = UIImage(systemName: "car.top.radiowaves.front")
-        let markerView = car
-//        markerView.tintColor = .blue
+        let car = UIImage(systemName: "car.circle.fill")?.withRenderingMode(.alwaysTemplate)
+        let markerView = UIImageView(image: car)
+        markerView.tintColor = .white
         carView = markerView
         
 //         Move Camera to the location with animation
@@ -78,15 +78,13 @@ class Vehicle  {
        if i < path.count() {
            carMarker.map = nil
            carMarker = GMSMarker(position: path.coordinate(at: i))
-           let head = locationManager.location?.course ?? 0
+           carMarker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
+           carMarker.iconView = carView
            
-           print("location manager: \(head)")
-           carMarker.rotation = 45
-           carMarker.icon = carView
 
            newPath.add(path.coordinate(at: i))
            newPolyline.path = newPath
-           newPolyline.strokeColor = UIColor.black
+           newPolyline.strokeColor = UIColor.systemCyan
            newPolyline.strokeWidth = 4
            newPolyline.map = self.map
            carMarker.map = self.map
