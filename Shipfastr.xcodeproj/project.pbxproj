@@ -20,6 +20,13 @@
 		A8491A93291B086A00D40B01 /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A92291B086A00D40B01 /* MapViewControllerBridge.swift */; };
 		A8491A96291B088000D40B01 /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A95291B088000D40B01 /* Shipment.swift */; };
 		A8491A98291B088F00D40B01 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A97291B088F00D40B01 /* Vehicle.swift */; };
+		A8491A9A291DF12700D40B01 /* ContentViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A99291DF12700D40B01 /* ContentViewTwo.swift */; };
+		A8491A9C291DF21200D40B01 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A9B291DF21200D40B01 /* City.swift */; };
+		F80830A62920838A0052727C /* OptimizerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80830A52920838A0052727C /* OptimizerResponse.swift */; };
+		F824FD18292187FF00FA90AE /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD17292187FF00FA90AE /* AutocompleteViewController.swift */; };
+		F824FD1A29218BF900FA90AE /* AutocompleteViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD1929218BF900FA90AE /* AutocompleteViewControllerBridge.swift */; };
+		F824FD1C2921A03000FA90AE /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD1B2921A03000FA90AE /* Dummy.swift */; };
+		F824FD1F2921CC1600FA90AE /* HistoryShipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD1E2921CC1600FA90AE /* HistoryShipment.swift */; };
 		F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */; };
 		F88D4C22291AFA6500896275 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C21291AFA6500896275 /* ContentView.swift */; };
 		F88D4C24291AFA6600896275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88D4C23291AFA6600896275 /* Assets.xcassets */; };
@@ -44,6 +51,11 @@
 		A8491A97291B088F00D40B01 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.release.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.release.xcconfig"; sourceTree = "<group>"; };
 		D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shipfastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80830A52920838A0052727C /* OptimizerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizerResponse.swift; sourceTree = "<group>"; };
+		F824FD17292187FF00FA90AE /* AutocompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AutocompleteViewController.swift; path = ../../../../../../../AutocompleteViewController.swift; sourceTree = "<group>"; };
+		F824FD1929218BF900FA90AE /* AutocompleteViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteViewControllerBridge.swift; sourceTree = "<group>"; };
+		F824FD1B2921A03000FA90AE /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		F824FD1E2921CC1600FA90AE /* HistoryShipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryShipment.swift; sourceTree = "<group>"; };
 		F88D4C1C291AFA6500896275 /* Shipfastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shipfastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipfastrApp.swift; sourceTree = "<group>"; };
 		F88D4C21291AFA6500896275 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +108,7 @@
 		A8491A88291B081500D40B01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F824FD1D2921CB1100FA90AE /* HistoryShipment */,
 				F8A97F38291C317F00DD9EBF /* DestinationMenuView */,
 				A8491A8F291B084100D40B01 /* MapView */,
 				A8491A89291B082300D40B01 /* HomeView.swift */,
@@ -120,8 +133,18 @@
 				A8491A95291B088000D40B01 /* Shipment.swift */,
 				A8491A97291B088F00D40B01 /* Vehicle.swift */,
 				A802F5EB2920914E00BC02A4 /* MapStyling.swift */,
+				A8491A9B291DF21200D40B01 /* City.swift */,
+				F80830A52920838A0052727C /* OptimizerResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F824FD1D2921CB1100FA90AE /* HistoryShipment */ = {
+			isa = PBXGroup;
+			children = (
+				F824FD1E2921CC1600FA90AE /* HistoryShipment.swift */,
+			);
+			path = HistoryShipment;
 			sourceTree = "<group>";
 		};
 		F88D4C13291AFA6500896275 = {
@@ -169,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				F8A97F39291C319400DD9EBF /* DestinationMenuView.swift */,
+				F824FD17292187FF00FA90AE /* AutocompleteViewController.swift */,
+				F824FD1929218BF900FA90AE /* AutocompleteViewControllerBridge.swift */,
+				F824FD1B2921A03000FA90AE /* Dummy.swift */,
 			);
 			path = DestinationMenuView;
 			sourceTree = "<group>";
@@ -300,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A97F3A291C319400DD9EBF /* DestinationMenuView.swift in Sources */,
+				F824FD1C2921A03000FA90AE /* Dummy.swift in Sources */,
 				A8491A98291B088F00D40B01 /* Vehicle.swift in Sources */,
 				A8491A8A291B082300D40B01 /* HomeView.swift in Sources */,
 				A8491A96291B088000D40B01 /* Shipment.swift in Sources */,
@@ -309,8 +336,13 @@
 				A8491A8E291B083D00D40B01 /* HistoryView.swift in Sources */,
 				A802F5EC2920914E00BC02A4 /* MapStyling.swift in Sources */,
 				F88D4C22291AFA6500896275 /* ContentView.swift in Sources */,
+				F80830A62920838A0052727C /* OptimizerResponse.swift in Sources */,
+				F824FD18292187FF00FA90AE /* AutocompleteViewController.swift in Sources */,
 				F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */,
+				F824FD1F2921CC1600FA90AE /* HistoryShipment.swift in Sources */,
+				A8491A9A291DF12700D40B01 /* ContentViewTwo.swift in Sources */,
 				F8A97F3F291DB89200DD9EBF /* OptimizerManager.swift in Sources */,
+				F824FD1A29218BF900FA90AE /* AutocompleteViewControllerBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

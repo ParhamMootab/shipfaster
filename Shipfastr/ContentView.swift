@@ -28,13 +28,15 @@ struct ContentView: View {
             ZStack {
                 switch selectedTab {
                 case 2: 
-                    HistoryView()
+
+                    HistoryView(viewIdx: 0)
+                    
                 case 3:
-                    DestinationMenuView()
+                    DestinationMenuView(selectedTab: $selectedTab, selectedShipment: $selectedShipment)
                 default:
                     MapViewControllerBridge(selectedShipment: $selectedShipment, selectedMapStyle:  $selectedMapStyle, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()
-                                        
+
                     if isShipmentShowing {
                         VStack {
                             HStack {
@@ -87,8 +89,10 @@ struct ContentView: View {
                     }
                     
                 }
-                HomeView(isShowing: $showHomeSheet, selectedMapStyle: $selectedMapStyle)
-                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing)
+
+                HomeView(isShowing: $showHomeSheet)
+                ActivityView(selectedShipment: $selectedShipment, isShowing: $showActivitySheet, isShipmentShowing: $isShipmentShowing, selectedTab: $selectedTab)
+
             }
 
             if !isShipmentShowing {
