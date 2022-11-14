@@ -4,7 +4,7 @@
 :exclamation: It provides integrated services to optimize deliveries for shipment companies.   
 :exclamation: It remains flexible to adjust day to day changes and dynamic schedules.  
 ## Get it running :dizzy: :dizzy: !
-1. Clone the main branch
+1. Clone the main branch (main is the updated branch)
 2. Go to the repo folder
 3. Run the following command in the terminal and the packages will be installed
 ```
