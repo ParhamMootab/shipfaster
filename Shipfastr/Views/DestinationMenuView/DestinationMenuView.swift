@@ -14,6 +14,9 @@ struct DestinationMenuView: View {
     @State var destinationNum = 1
     @Binding var selectedTab: Int
     @Binding var selectedShipment: Shipment?
+    @Binding var isShipmentShowing: Bool
+    
+    
     var body: some View {
         VStack{
     
@@ -88,7 +91,8 @@ struct DestinationMenuView: View {
                     }
                 }
                 
-                selectedTab = 2
+                selectedTab = 0
+                isShipmentShowing = true
                 
             } label: {
                 HStack {
@@ -129,6 +133,6 @@ struct DestinationMenuView: View {
 
 struct DestinationMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationMenuView(selectedTab: .constant(3), selectedShipment: .constant(nil))
+        DestinationMenuView(selectedTab: .constant(3), selectedShipment: .constant(nil), isShipmentShowing: .constant(false))
     }
 }
