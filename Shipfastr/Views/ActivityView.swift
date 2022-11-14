@@ -92,7 +92,6 @@ struct ActivityView: View {
                             }) {
                                 Text("Vancouver" )
                                     .font(.system(size:22, weight: .regular))
-                                
                             }
                         }
                         Spacer()
