@@ -16,7 +16,7 @@ struct DestinationMenuView: View {
     @Binding var selectedShipment: Shipment?
     var body: some View {
         VStack{
-            
+    
             HStack{
                 ZStack{
                     Capsule()
@@ -26,7 +26,6 @@ struct DestinationMenuView: View {
                     TextField("Source", text: $locationList[0])
                         .padding(.leading)
                         .frame(height: 50)
-                        
                 }
                 
                 Button {
@@ -65,8 +64,10 @@ struct DestinationMenuView: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor(Color.red)
                                 .opacity(0.6)
+                                
                         }
                     }
+                
                 }
             }
             
@@ -96,11 +97,11 @@ struct DestinationMenuView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                 }
-                .frame(width: 300, height: 60)
+                .frame(width: 300, height: 50)
                 .background(Color("MainBlue"))
                 .foregroundColor(Color.white)
                 .clipShape(Capsule())
-                
+                .padding(.bottom, 50)
             }
             
         }
