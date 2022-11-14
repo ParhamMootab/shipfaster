@@ -132,7 +132,7 @@ class Vehicle  {
     }
     
      func startAnimationTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.08, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
     }
      
     
