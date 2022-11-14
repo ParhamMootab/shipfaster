@@ -21,8 +21,9 @@
 		A8491A96291B088000D40B01 /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A95291B088000D40B01 /* Shipment.swift */; };
 		A8491A98291B088F00D40B01 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8491A97291B088F00D40B01 /* Vehicle.swift */; };
 		A8491A9A291DF12700D40B01 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A8BEBE80292233750010D72A /* PlaceAutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEBE7F292233750010D72A /* PlaceAutocompleteViewController.swift */; };
+		A8BEBE82292233E50010D72A /* PlaceAutocompleteViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BEBE81292233E50010D72A /* PlaceAutocompleteViewControllerBridge.swift */; };
 		F80830A62920838A0052727C /* OptimizerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80830A52920838A0052727C /* OptimizerResponse.swift */; };
-		F824FD1C2921A03000FA90AE /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD1B2921A03000FA90AE /* Dummy.swift */; };
 		F824FD1F2921CC1600FA90AE /* HistoryShipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F824FD1E2921CC1600FA90AE /* HistoryShipment.swift */; };
 		F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */; };
 		F88D4C22291AFA6500896275 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D4C21291AFA6500896275 /* ContentView.swift */; };
@@ -46,10 +47,11 @@
 		A8491A92291B086A00D40B01 /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		A8491A95291B088000D40B01 /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
 		A8491A97291B088F00D40B01 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A8BEBE7F292233750010D72A /* PlaceAutocompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAutocompleteViewController.swift; sourceTree = "<group>"; };
+		A8BEBE81292233E50010D72A /* PlaceAutocompleteViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAutocompleteViewControllerBridge.swift; sourceTree = "<group>"; };
 		B9AEBBB8DDE8E4CD61BA3775 /* Pods-Shipfastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shipfastr.release.xcconfig"; path = "Target Support Files/Pods-Shipfastr/Pods-Shipfastr.release.xcconfig"; sourceTree = "<group>"; };
 		D7F9D4018FBB26198C02B821 /* Pods_Shipfastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shipfastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80830A52920838A0052727C /* OptimizerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizerResponse.swift; sourceTree = "<group>"; };
-		F824FD1B2921A03000FA90AE /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		F824FD1E2921CC1600FA90AE /* HistoryShipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryShipment.swift; sourceTree = "<group>"; };
 		F88D4C1C291AFA6500896275 /* Shipfastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shipfastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D4C1F291AFA6500896275 /* ShipfastrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipfastrApp.swift; sourceTree = "<group>"; };
@@ -186,7 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A97F39291C319400DD9EBF /* DestinationMenuView.swift */,
-				F824FD1B2921A03000FA90AE /* Dummy.swift */,
+				A8BEBE7F292233750010D72A /* PlaceAutocompleteViewController.swift */,
+				A8BEBE81292233E50010D72A /* PlaceAutocompleteViewControllerBridge.swift */,
 			);
 			path = DestinationMenuView;
 			sourceTree = "<group>";
@@ -318,12 +321,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A97F3A291C319400DD9EBF /* DestinationMenuView.swift in Sources */,
-				F824FD1C2921A03000FA90AE /* Dummy.swift in Sources */,
 				A8491A98291B088F00D40B01 /* Vehicle.swift in Sources */,
 				A8491A8A291B082300D40B01 /* HomeView.swift in Sources */,
 				A8491A96291B088000D40B01 /* Shipment.swift in Sources */,
 				A8491A91291B085200D40B01 /* MapViewController.swift in Sources */,
 				A8491A8C291B083200D40B01 /* ActivityView.swift in Sources */,
+				A8BEBE80292233750010D72A /* PlaceAutocompleteViewController.swift in Sources */,
 				A8491A93291B086A00D40B01 /* MapViewControllerBridge.swift in Sources */,
 				A8491A8E291B083D00D40B01 /* HistoryView.swift in Sources */,
 				A802F5EC2920914E00BC02A4 /* MapStyling.swift in Sources */,
@@ -331,6 +334,7 @@
 				F80830A62920838A0052727C /* OptimizerResponse.swift in Sources */,
 				F88D4C20291AFA6500896275 /* ShipfastrApp.swift in Sources */,
 				F824FD1F2921CC1600FA90AE /* HistoryShipment.swift in Sources */,
+				A8BEBE82292233E50010D72A /* PlaceAutocompleteViewControllerBridge.swift in Sources */,
 				A8491A9A291DF12700D40B01 /* (null) in Sources */,
 				F8A97F3F291DB89200DD9EBF /* OptimizerManager.swift in Sources */,
 			);

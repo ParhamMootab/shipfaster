@@ -35,6 +35,10 @@ struct ContentView: View {
                         .onAppear {
                             showActivitySheet = false
                         }
+//                    PlaceAutocompleteViewControllerBridge()
+//                        .onAppear {
+//                            showActivitySheet = false
+//                        }
                 default:
                     MapViewControllerBridge(selectedShipment: $selectedShipment, selectedMapStyle:  $selectedMapStyle, isShipmentShowing: $isShipmentShowing)
                         .ignoresSafeArea()

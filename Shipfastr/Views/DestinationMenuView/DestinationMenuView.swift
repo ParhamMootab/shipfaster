@@ -26,7 +26,6 @@ struct DestinationMenuView: View {
                     TextField("Source", text: $locationList[0])
                         .padding(.leading)
                         .frame(height: 50)
-                        
                 }
                 
                 Button {
@@ -65,8 +64,10 @@ struct DestinationMenuView: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor(Color.red)
                                 .opacity(0.6)
+                                
                         }
                     }
+                
                 }
             }
             
