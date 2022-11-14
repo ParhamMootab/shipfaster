@@ -7,6 +7,7 @@
 
 import Foundation
 import GoogleMaps
+import SwiftUI
 
 
 class Vehicle  {
@@ -30,6 +31,7 @@ class Vehicle  {
     
 
     var carView: UIImageView?
+    var mapView: UIImageView?
 
     init (route: String?, locations: [CLLocationCoordinate2D]) {
         self.route = route
@@ -43,10 +45,36 @@ class Vehicle  {
     
     
     func addMarkers(){
-        for location in self.locations {
-            let marker = GMSMarker(position: location)
-            marker.map = self.map
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 40, weight: .bold, scale: .large)
+        var mappin = UIImage(systemName: "mappin.and.ellipse", withConfiguration: largeConfig)?.withRenderingMode(.alwaysTemplate)
+        var markerView = UIImageView(image: mappin)
+        markerView.tintColor = .systemPurple
+        mapView = markerView
+        
+        // different pin for source
+        let marker = GMSMarker(position: locations[0])
+        marker.iconView = mapView
+        marker.title = "See Shipment Overview"
+        marker.map = self.map
+        
+        
+        mappin = UIImage(systemName: "mappin", withConfiguration: largeConfig)?.withRenderingMode(.alwaysTemplate)
+        markerView = UIImageView(image: mappin)
+        markerView.tintColor = .orange
+        mapView = markerView
+        
+        for (id, _) in locations.enumerated() {
+            if id > 0 {
+                let marker = GMSMarker(position: locations[id])
+                marker.iconView = mapView
+                marker.map = self.map
+            }
+            
         }
+//        for location in self.locations {
+//            let marker = GMSMarker(position: location)
+//            marker.map = self.map
+//        }
     }
     
     func drawRouteOnMap() {
@@ -59,15 +87,15 @@ class Vehicle  {
         polyline.strokeWidth = 2
         polyline.map = self.map
 
-
-        let car = UIImage(systemName: "car.circle.fill")?.withRenderingMode(.alwaysTemplate)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .bold, scale: .large)
+        let car = UIImage(systemName: "car.circle.fill", withConfiguration: largeConfig)?.withRenderingMode(.alwaysTemplate)
         let markerView = UIImageView(image: car)
         markerView.tintColor = .white
         carView = markerView
         
 //         Move Camera to the location with animation
         let bounds = GMSCoordinateBounds(path: path)
-        let insets = UIEdgeInsets(top: 20, left: 40, bottom: 20, right: 40)
+        let insets = UIEdgeInsets(top: 20, left: 60, bottom: 20, right: 60)
         let camera = GMSCameraUpdate.fit(bounds, with: insets)
         self.map?.animate(with: camera)
     }
@@ -104,8 +132,8 @@ class Vehicle  {
     }
     
      func startAnimationTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.animatePolylinePath), userInfo: nil, repeats: true)
     }
-    
+     
     
 }
