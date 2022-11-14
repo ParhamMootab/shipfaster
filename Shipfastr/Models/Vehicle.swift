@@ -55,7 +55,7 @@ class Vehicle  {
         self.path = path
 
         polyline = GMSPolyline(path: path)
-        polyline.strokeColor = UIColor.gray
+        polyline.strokeColor = UIColor.systemCyan
         polyline.strokeWidth = 2
         polyline.map = self.map
 
@@ -84,7 +84,7 @@ class Vehicle  {
 
            newPath.add(path.coordinate(at: i))
            newPolyline.path = newPath
-           newPolyline.strokeColor = UIColor.systemCyan
+           newPolyline.strokeColor = UIColor.systemBlue
            newPolyline.strokeWidth = 4
            newPolyline.map = self.map
            carMarker.map = self.map

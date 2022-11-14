@@ -17,8 +17,16 @@ struct ActivityView: View {
         CLLocationCoordinate2D(latitude: 49.31994311243845, longitude: -123.01923812773032),
     ])
     
+    static let vehicle2 = Vehicle(route: "m_xkHlufmVQxC`@Hv@r@fAP|BCnAXlAr@f@fApBfPj@|GCfBs@xTv@fCdBpBLf@d@AJq@bB_FxCqHjEgK~@aB~EaFzFaGlBsBbBqCnC_HvJwXjI{Uz@aFLaKo@uFcBaHuFqTk@kDCkCXyDv@qChAkB|BiBvCQtAb@hCjCxCjHbT|j@hDtIlBrDpChC~BfAzIj@tIX~EVzHB`IP|HX`ATtAz@hBlA~BpBv@gC?cBGyBBqAdA_CnBeDlCiB|CsAnAiAlEcJzAkB|Am@hBPpBdAzA^pCOvEm@~@m@hLyOpG}ItBsCj@u@Vf@xDzIdH`P|C|GxOt^~HfQ|CdHLV\\a@Xc@Xi@\\wAdBaLj@kB`CsDrHuKxEqGd\\wc@`JuKvCq@dFy@nKoGbB}A|DcNhFoSnHiZT}BE_Ig@uNq@_]HoLGwSk@}UMyOm@yKiBgRe@oIBqCbAsJpBqGd\\ak@jIgNvDuDdF{B`Fa@jFF~CAz@@?k@@iB@kBBuIfE?bCo@HdB}BNc@FBiANCbCo@zCw@`@Af@@AxA?zCEvF@xEGrYFdRAjGI`GNjEjGB|HBz\\LbV\\~GL`FHbB?AzE?nB?xC?~HAvNPpCxA@yAAAkIB{R@{HQkDiJImR[mMQgJEqFCSYGS?[JqArAiG_JWCGEAIB_CJAbB@cBzBJ@BBDD?HGTA|HCo@xBkArH[xFSbA{GtUqAbBwFnBq@l@k@n@_@`@AlB?~A?tDIpCC~PEjg@[bc@SpLk@bHmCfL}B`Fq@~@WDa@A_AuA_@g@aBsA_JsLyCwD_BeCeFyF{HsIsKkNmAoBqAyLa@oCgAoAkAM}ElAkAvBa@fFF|In@xWtAv_@ElCgAtGgKn`@_CtJiDfL{EvCeHzE}Eh@sARmAr@_E|E{BlD_KdN_FzGmDtEq@z@M[q@}Ak@oAcC}FkCcF{@jAqHzJcG`I_GvHmE|FMN}@jAUi@eA_CyAiDcA_CwIkSmMqYkBgEw@dAiCfDsCrDsCbDuF~H_DxDcAb@iIh@eAQgDyAeBDoAp@s@x@_B`DeChFwA|AaDzAgClBmB`D_A~BAxAJnCIpAkAf@gD_C}DeAwXq@k@_@gAGoBIgNY{FUyC_AoCoBmAgBwE{K{M}]eHiRqBgEs@{@uCsAsB?uCrAeApAcAzBk@zCMhE^rEvGdVbB`Hn@tFM`K{@`FcUro@oC~GcBpCmBrByMxLmBrDkGxPwBfEu@j@u@F}@Qg@o@g@}Cv@aUs@eKgAqJq@gDmBuAiA[aBqAy@e@y@B}@?HmB", locations: [
+        
+        CLLocationCoordinate2D(latitude: 49.279848063981305, longitude: -122.91945081880527),
+        CLLocationCoordinate2D(latitude: 49.19313007827979, longitude: -122.84289745689237),
+        CLLocationCoordinate2D(latitude: 49.17658036861975, longitude: -122.86384014279186),
+        CLLocationCoordinate2D(latitude: 49.18937181646324, longitude: -122.85482792140071),
+    ])
+    
     static let shipments = [
-        Shipment(vehicles: [vehicle1])
+        Shipment(vehicles: [vehicle1, vehicle2])
     ]
     
     @Binding var selectedShipment: Shipment?
