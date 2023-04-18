@@ -13,6 +13,6 @@ pod install
 4. Open Xcode and run the project on IOS 15 and higher.
 
 ##
-<a href="https://ibb.co/RSzMHqB"><img src="https://i.ibb.co/ZJWwT0Y/Screen-Shot-2022-11-14-at-10-56-10-AM.png" alt="Screen-Shot-2022-11-14-at-10-56-10-AM" border="0"></a>
+
 
 
